@@ -1,3 +1,4 @@
+import Footer from '@/components/layout/footer'
 import Header from '@/components/layout/header'
 import { geistMono, redhat } from '@/fonts/font'
 import '@/styles/globals.css'
@@ -20,6 +21,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
