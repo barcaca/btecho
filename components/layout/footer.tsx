@@ -18,7 +18,10 @@ const Footer = () => {
           BTECHO.GG is not affiliated with ZeptoLab. All trademarks, logos, and
           names belong to their respective owners.
         </p>
-        <div className="inline-flex items-center gap-8">
+        <div
+          className="inline-flex items-center gap-8"
+          aria-label="Social media links"
+        >
           {socials.map(social => (
             <Link
               key={social.name}
@@ -26,6 +29,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={buttonVariants({ variant: 'outline', size: 'icon' })}
+              aria-label={`Visit our ${social.name} profile`}
             >
               <social.icon className="size-6" />
             </Link>

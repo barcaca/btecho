@@ -24,9 +24,9 @@ const Header = () => {
 
 const Nav = ({ children }: { children: React.ReactNode }) => {
   return (
-    <nav aria-label="Navigation" className="flex h-12 items-center gap-4">
+    <nav aria-label="Main Navigation" className="flex h-12 items-center gap-4">
       <Link href="/" aria-label="Home">
-        <Image src={logo} alt="Logo" width={76} height={46} />
+        <Image src={logo} alt="Logo BTECHO" width={76} height={46} />
       </Link>
       <ul className="flex h-full w-full items-center gap-1">{children}</ul>
     </nav>
@@ -46,6 +46,7 @@ const NavItem = () => {
         <Link
           href={item.href}
           className="relative flex items-center px-3 py-2 focus-visible:outline-1 focus-visible:ring-1 focus-visible:ring-yellow-500"
+          aria-current={isActive ? 'page' : undefined}
         >
           {item.name}
         </Link>
