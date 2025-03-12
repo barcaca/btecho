@@ -1,3 +1,4 @@
+import Header from '@/components/layout/header'
 import { geistMono, redhat } from '@/fonts/font'
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${redhat.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${redhat.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
+      >
+        <Header />
         {children}
       </body>
     </html>
